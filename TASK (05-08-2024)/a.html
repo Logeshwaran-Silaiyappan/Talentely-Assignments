@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Document</title>
+
+    <style>
+
+        .back {
+            background-color: rgb(160, 89, 89);
+            height: 730px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .front {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            column-gap: 50px;
+            justify-items: center;
+        }
+
+        .b {
+            height: 50px;
+            width: 50px;
+            border-radius: 30px;
+            border: none;
+            position: relative; 
+
+            background: #fff;         }
+
+            .b img {
+                width: 50%;
+                height: 50%;
+                object-fit: cover;
+                border-radius: 30px;
+            }
+
+            .b .tooltip {
+                visibility: hidden;
+                opacity: 0;
+                background-color: #3855d6;
+                color: #fff;
+                text-align: center;
+                border-radius: 5px;
+                padding: 5px;
+                position: absolute;
+                bottom: 125%; 
+
+                left: 50%;
+                transform: translateX(-50%);
+                width: 120px;
+                transition: opacity 0.3s;
+                z-index: 1;
+            }
+
+                .b .tooltip::after {
+                    content: "";
+                    position: absolute;
+                    bottom: -20px; 
+
+                    left: 50%;
+                    transform: translateX(-50%);
+                    border-width: 10px;
+                    border-style: solid;
+                    border-color: #3855d6 transparent transparent transparent; 
+                }
+
+            .b:hover .tooltip {
+                visibility: visible;
+                opacity: 1;
+            }
+
+            .b:hover {
+                background-color: #3855d6;
+            }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="back">
+
+        <div class="front">
+
+            <button class="b">
+
+                <img src="facebook.jpeg" alt="Image 1">
+
+                <span class="tooltip">Facebook</span>
+
+            </button>
+
+            <button class="b">
+
+                <img src="twitter.jpeg" alt="Image 2">
+
+                <span class="tooltip">Twitter</span>
+
+            </button>
+
+            <button class="b">
+
+                <img src="instagram.jpeg" alt="Image 3">
+
+                <span class="tooltip">Instagram</span>
+
+            </button>
+
+            <button class="b">
+
+                <img src="Github.jpeg" alt="Image 4">
+
+                <span class="tooltip">Githup</span>
+
+            </button>
+
+            <button class="b">
+
+                <img src="youtube.jpeg" alt="Image 5">
+
+                <span class="tooltip">Youtube</span>
+
+            </button>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>
+
+
